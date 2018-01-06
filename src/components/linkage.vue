@@ -1,19 +1,24 @@
 <template>
     <div>
-
+        <v-select v-model="selected" :options="['foo','bar']"></v-select>
     </div>
 </template>
-<style lang="scss">
+<style>
 
 </style>
 <script>
+  import vSelect from 'vue-select'
   export default {
     data () {
-      return {}
+      return {
+        selected : 'foo'
+      }
     },
     props: {},
     computed: {},
-    components: {},
+    components: {
+      vSelect
+    },
     methods: {},
     created () {
     }

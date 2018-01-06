@@ -12,17 +12,21 @@
                                       class="white no-underline underline-hover">vue-multistage-linkage</a></div>
         </div>
         <p class="pt5 f2" style="text-align: center;">多级联动demo</p>
+        <vue-multistage-linkage></vue-multistage-linkage>
     </div>
 </template>
 
 <script>
+    import vueMultistageLinkage from 'src/components/linkage.vue'
   export default {
     name: 'app',
     data () {
       return {}
     },
     computed: {},
-    components: {}
+    components: {
+      vueMultistageLinkage
+    }
   }
 </script>
 

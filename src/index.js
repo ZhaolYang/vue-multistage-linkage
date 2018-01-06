@@ -1,10 +1,10 @@
-import vueMyCLass from './components/myClass.vue'
+import vueLinkage from './components/linkage.vue'
 
 // expose component to global scope
 if (typeof window !== 'undefined' && window.Vue) {
-  Vue.component('vue-seamless-scroll', vueMyCLass)
+  Vue.component('vue-multistage-linkage', vueLinkage)
 }
 
-export { vueMyCLass }
+export { vueLinkage }
 
-export default vueMyCLass
+export default vueLinkage

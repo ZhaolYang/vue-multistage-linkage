@@ -7,9 +7,9 @@ const base = require('./webpack.base.js')
 const config = merge(base, {
   entry: options.paths.resolve('src/index.js'),
   output: {
-    filename: options.isProduction ? 'vue-seamless-scroll.min.js' : 'vue-seamless-scroll.js',
+    filename: options.isProduction ? 'vue-multistage-linkage.min.js' : 'vue-multistage-linkage.js',
     path: options.paths.output.main,
-    library: 'vueSeamlessScroll',
+    library: 'vueMultistageLinkage',
     libraryExport: 'default',
     libraryTarget: 'umd'
   },
