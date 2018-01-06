@@ -8,24 +8,33 @@
                 </svg>
             </a>
             </div>
-            <div class="flex-none" style="margin-left: 10px;"><a href="https://github.com/chenxuan0000/vue-multistage-linkage"
-                                      class="white no-underline underline-hover">vue-multistage-linkage</a></div>
+            <div class="flex-none" style="margin-left: 10px;"><a
+                    href="https://github.com/chenxuan0000/vue-multistage-linkage"
+                    class="white no-underline underline-hover">vue-multistage-linkage</a></div>
         </div>
         <p class="pt5 f2" style="text-align: center;">多级联动demo</p>
-        <vue-multistage-linkage></vue-multistage-linkage>
+        <div style="margin: auto;width: 300px;">
+            <vue-multistage-linkage :jsonData="jsonData"></vue-multistage-linkage>
+        </div>
     </div>
 </template>
 
 <script>
-    import vueMultistageLinkage from 'src/components/linkage.vue'
+  import vueMultistageLinkage from 'src/components/linkage.vue'
+  const jsonData = require('./data/data.js')
+
   export default {
     name: 'app',
     data () {
-      return {}
+      return {
+        jsonData : jsonData
+      }
     },
     computed: {},
     components: {
       vueMultistageLinkage
+    },
+    created () {
     }
   }
 </script>
@@ -95,7 +104,7 @@
             width: 90%;
             margin: 20px auto;
             p {
-                margin-bottom:0;
+                margin-bottom: 0;
             }
         }
     }
