@@ -14,20 +14,26 @@
         </div>
         <p class="pt5 f2" style="text-align: center;">多级联动demo</p>
         <div style="margin: auto;width: 300px;">
-            <vue-multistage-linkage :jsonData="jsonData"></vue-multistage-linkage>
+            <vue-multistage-linkage :jsonData="jsonData" @changeCalback="changeCalback"></vue-multistage-linkage>
         </div>
     </div>
 </template>
 
 <script>
   import vueMultistageLinkage from 'src/components/linkage.vue'
+
   const jsonData = require('./data/data.js')
 
   export default {
     name: 'app',
     data () {
       return {
-        jsonData : jsonData
+        jsonData: jsonData
+      }
+    },
+    methods: {
+      changeCalback (obj) {
+        console.log(obj)
       }
     },
     computed: {},
